@@ -1,4 +1,5 @@
 using PlayerGameDataService.Models;
+using PlayerGameDataService.Services;
 namespace PlayerGameDataService.Endpoints;
 
 public static class ScoreEndpoints
@@ -7,15 +8,21 @@ public static class ScoreEndpoints
     {
         var group = app.MapGroup("/scores");
 
-        group.MapGet("/", () =>
+        group.MapGet("/", (ScoreService scoreService) =>
         {
-            Score[] items =
-            [
-                // Version 7 because time is a part of it, so easier to sort
-                new Score(Guid.CreateVersion7(), 200, "Me", DateTimeOffset.UtcNow),
-                new Score(Guid.CreateVersion7(), 400, "Myself", DateTimeOffset.UtcNow.AddDays(-1)),
-            ];
-            return items;
+            return scoreService.GetAll();
         }).WithName("GetScores");
+
+        group.MapGet("/{id:guid}", (Guid id, ScoreService scoreService) =>
+        {
+            Score? foundScore = scoreService.FindById(id);
+            return (foundScore == null) ? Results.NotFound() : Results.Ok(foundScore);
+        }).WithName("GetScoreById");
+
+        group.MapPost("/", (SubmitScoreRequest request, ScoreService scoreService) =>
+        {
+            Score newScore = scoreService.Add(request);
+            return Results.CreatedAtRoute("GetScoreById", new { id = newScore.Id }, newScore);
+        }).WithName("SubmitScore");
     }
 }
