@@ -9,6 +9,8 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddSingleton<ScoreService>();
 
+builder.Services.AddProblemDetails();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
