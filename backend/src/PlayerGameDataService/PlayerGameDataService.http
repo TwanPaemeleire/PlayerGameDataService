@@ -1,6 +1,53 @@
 @PlayerGameDataService_HostAddress = http://localhost:5269
 
-GET {{PlayerGameDataService_HostAddress}}/weatherforecast/
+### All scores
+GET {{PlayerGameDataService_HostAddress}}/scores
 Accept: application/json
 
-###
+### Top scores, default count (10)
+GET {{PlayerGameDataService_HostAddress}}/scores/top
+Accept: application/json
+
+### Top score only
+GET {{PlayerGameDataService_HostAddress}}/scores/top?count=1
+Accept: application/json
+
+### Top scores with an invalid count -> 400 ProblemDetails
+GET {{PlayerGameDataService_HostAddress}}/scores/top?count=0
+Accept: application/json
+
+### Submit a valid score -> 201 Created + Location header
+# @name submitScore
+POST {{PlayerGameDataService_HostAddress}}/scores
+Content-Type: application/json
+
+{
+  "playerName": "Twan",
+  "value": 999
+}
+
+### Submit an invalid score -> 400 with both errors
+POST {{PlayerGameDataService_HostAddress}}/scores
+Content-Type: application/json
+
+{
+  "playerName": "",
+  "value": -5
+}
+
+### Submit a name that is too long -> 400
+POST {{PlayerGameDataService_HostAddress}}/scores
+Content-Type: application/json
+
+{
+  "playerName": "ThisNameIsWayTooLongForTheBoard",
+  "value": 10
+}
+
+### Get the score submitted above -> 200 (send "submitScore" first)
+GET {{PlayerGameDataService_HostAddress}}/scores/{{submitScore.response.body.$.id}}
+Accept: application/json
+
+### Get a score that doesn't exist -> 404
+GET {{PlayerGameDataService_HostAddress}}/scores/00000000-0000-0000-0000-000000000000
+Accept: application/json
