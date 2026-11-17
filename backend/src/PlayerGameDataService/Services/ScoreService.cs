@@ -1,46 +1,71 @@
+using Microsoft.EntityFrameworkCore;
+using PlayerGameDataService.Data;
 using PlayerGameDataService.Models;
 namespace PlayerGameDataService.Services;
 
-public sealed class ScoreService
+public sealed class ScoreService(LeaderboardDbContext db)
 {
-    private readonly Lock _scoresListLock = new();
-    private readonly List<ScoreResponse> _scores =
-    [
-        new ScoreResponse(Guid.CreateVersion7(), 200, "Me", DateTimeOffset.UtcNow),
-        new ScoreResponse(Guid.CreateVersion7(), 400, "Myself", DateTimeOffset.UtcNow.AddDays(-1))
-    ];
-
-    public IReadOnlyList<ScoreResponse> GetAll()
+    public async Task<IReadOnlyList<ScoreResponse>> GetAllAsync()
     {
-        lock (_scoresListLock)
-        {
-            return _scores.ToList();
-        }
+        return await db.Scores
+            .OrderByDescending(s => s.SubmittedAt)
+            .Select(s => new ScoreResponse(
+                s.Id,
+                s.Value,
+                s.Player.Name,
+                new DateTimeOffset(s.SubmittedAt, TimeSpan.Zero)))
+            .ToListAsync();
     }
 
-    public ScoreResponse Add(SubmitScoreRequest request)
+    public async Task<ScoreResponse> AddAsync(SubmitScoreRequest request)
     {
-        ScoreResponse newScore = new ScoreResponse(Guid.CreateVersion7(), request.Value, request.PlayerName, DateTimeOffset.UtcNow);
-        lock (_scoresListLock)
+        Player? playerResult = await db.Players.FirstOrDefaultAsync(p => p.Name == request.PlayerName);
+        if (playerResult is null)
         {
-            _scores.Add(newScore);
+            playerResult = new Player { Id = Guid.CreateVersion7(), Name = request.PlayerName };
+            db.Players.Add(playerResult);
         }
-        return newScore;
+
+        Score newScore = new Score
+        {
+            Id = Guid.CreateVersion7(),
+            Player = playerResult,
+            PlayerId = playerResult.Id,
+            SubmittedAt = DateTime.UtcNow,
+            Value = request.Value
+        };
+        db.Scores.Add(newScore);
+        await db.SaveChangesAsync();
+
+        return new ScoreResponse(newScore.Id,
+                                 newScore.Value,
+                                 newScore.Player.Name,
+                                 new DateTimeOffset(newScore.SubmittedAt, TimeSpan.Zero));
     }
 
-    public ScoreResponse? FindById(Guid id)
+    public async Task<ScoreResponse?> FindByIdAsync(Guid id)
     {
-        lock (_scoresListLock)
-        {
-            return _scores.Find(score => score.Id == id);
-        }
+        return await db.Scores
+            .Where(s => s.Id == id)
+            .Select(s => new ScoreResponse(
+                s.Id,
+                s.Value,
+                s.Player.Name,
+                new DateTimeOffset(s.SubmittedAt, TimeSpan.Zero)))
+            .FirstOrDefaultAsync();
     }
 
-    public IReadOnlyList<ScoreResponse> GetTop(int count)
+    public async Task<IReadOnlyList<ScoreResponse>> GetTopAsync(int count)
     {
-        lock (_scoresListLock)
-        {
-            return _scores.OrderByDescending(score => score.Value).ThenBy(score => score.SubmittedAt).Take(count).ToList();
-        }
+        return await db.Scores
+            .OrderByDescending(s => s.Value)
+            .ThenBy(s => s.SubmittedAt)
+            .Select(s => new ScoreResponse(
+                s.Id,
+                s.Value,
+                s.Player.Name,
+                new DateTimeOffset(s.SubmittedAt, TimeSpan.Zero)))
+            .Take(count)
+            .ToListAsync();
     }
 }

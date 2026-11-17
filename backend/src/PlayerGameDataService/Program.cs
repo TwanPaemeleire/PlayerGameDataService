@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-builder.Services.AddSingleton<ScoreService>();
+builder.Services.AddScoped<ScoreService>();
 
 builder.Services.AddProblemDetails();
 builder.Services.AddDbContext<LeaderboardDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("Leaderboard")));

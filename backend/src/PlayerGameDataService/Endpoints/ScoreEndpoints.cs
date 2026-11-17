@@ -12,18 +12,18 @@ public static class ScoreEndpoints
     {
         var group = app.MapGroup("/scores");
 
-        group.MapGet("/", (ScoreService scoreService) =>
+        group.MapGet("/", async (ScoreService scoreService) =>
         {
-            return scoreService.GetAll();
+            return await scoreService.GetAllAsync();
         }).WithName("GetScores");
 
-        group.MapGet("/{id:guid}", (Guid id, ScoreService scoreService) =>
+        group.MapGet("/{id:guid}", async (Guid id, ScoreService scoreService) =>
         {
-            ScoreResponse? foundScore = scoreService.FindById(id);
+            ScoreResponse? foundScore = await scoreService.FindByIdAsync(id);
             return (foundScore == null) ? Results.NotFound() : Results.Ok(foundScore);
         }).WithName("GetScoreById");
 
-        group.MapPost("/", (SubmitScoreRequest request, ScoreService scoreService) =>
+        group.MapPost("/", async (SubmitScoreRequest request, ScoreService scoreService) =>
         {
             Dictionary<string, string[]> errors = new();
             if (string.IsNullOrWhiteSpace(request.PlayerName))
@@ -40,11 +40,11 @@ public static class ScoreEndpoints
             }
             if (errors.Count != 0) return Results.ValidationProblem(errors);
 
-            ScoreResponse newScore = scoreService.Add(request);
+            ScoreResponse newScore = await scoreService.AddAsync(request);
             return Results.CreatedAtRoute("GetScoreById", new { id = newScore.Id }, newScore);
         }).WithName("SubmitScore");
 
-        group.MapGet("/top", (ScoreService scoreService, int count = 10) =>
+        group.MapGet("/top", async (ScoreService scoreService, int count = 10) =>
         {
             Dictionary<string, string[]> errors = new();
             if (count < TopRangeStart || count > TopRangeEnd)
@@ -53,7 +53,7 @@ public static class ScoreEndpoints
             }
             if (errors.Count != 0) return Results.ValidationProblem(errors);
 
-            return Results.Ok(scoreService.GetTop(count));
+            return Results.Ok(await scoreService.GetTopAsync(count));
         }).WithName("GetTopScores");
     }
 }
