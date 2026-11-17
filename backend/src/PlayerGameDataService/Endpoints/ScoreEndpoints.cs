@@ -19,7 +19,7 @@ public static class ScoreEndpoints
 
         group.MapGet("/{id:guid}", (Guid id, ScoreService scoreService) =>
         {
-            Score? foundScore = scoreService.FindById(id);
+            ScoreResponse? foundScore = scoreService.FindById(id);
             return (foundScore == null) ? Results.NotFound() : Results.Ok(foundScore);
         }).WithName("GetScoreById");
 
@@ -40,7 +40,7 @@ public static class ScoreEndpoints
             }
             if (errors.Count != 0) return Results.ValidationProblem(errors);
 
-            Score newScore = scoreService.Add(request);
+            ScoreResponse newScore = scoreService.Add(request);
             return Results.CreatedAtRoute("GetScoreById", new { id = newScore.Id }, newScore);
         }).WithName("SubmitScore");
 

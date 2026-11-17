@@ -4,13 +4,13 @@ namespace PlayerGameDataService.Services;
 public sealed class ScoreService
 {
     private readonly Lock _scoresListLock = new();
-    private readonly List<Score> _scores =
+    private readonly List<ScoreResponse> _scores =
     [
-        new Score(Guid.CreateVersion7(), 200, "Me", DateTimeOffset.UtcNow),
-        new Score(Guid.CreateVersion7(), 400, "Myself", DateTimeOffset.UtcNow.AddDays(-1))
+        new ScoreResponse(Guid.CreateVersion7(), 200, "Me", DateTimeOffset.UtcNow),
+        new ScoreResponse(Guid.CreateVersion7(), 400, "Myself", DateTimeOffset.UtcNow.AddDays(-1))
     ];
 
-    public IReadOnlyList<Score> GetAll()
+    public IReadOnlyList<ScoreResponse> GetAll()
     {
         lock (_scoresListLock)
         {
@@ -18,9 +18,9 @@ public sealed class ScoreService
         }
     }
 
-    public Score Add(SubmitScoreRequest request)
+    public ScoreResponse Add(SubmitScoreRequest request)
     {
-        Score newScore = new Score(Guid.CreateVersion7(), request.Value, request.PlayerName, DateTimeOffset.UtcNow);
+        ScoreResponse newScore = new ScoreResponse(Guid.CreateVersion7(), request.Value, request.PlayerName, DateTimeOffset.UtcNow);
         lock (_scoresListLock)
         {
             _scores.Add(newScore);
@@ -28,7 +28,7 @@ public sealed class ScoreService
         return newScore;
     }
 
-    public Score? FindById(Guid id)
+    public ScoreResponse? FindById(Guid id)
     {
         lock (_scoresListLock)
         {
@@ -36,7 +36,7 @@ public sealed class ScoreService
         }
     }
 
-    public IReadOnlyList<Score> GetTop(int count)
+    public IReadOnlyList<ScoreResponse> GetTop(int count)
     {
         lock (_scoresListLock)
         {

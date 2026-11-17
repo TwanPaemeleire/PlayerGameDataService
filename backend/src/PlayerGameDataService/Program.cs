@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using PlayerGameDataService.Data;
 using PlayerGameDataService.Endpoints;
 using PlayerGameDataService.Services;
 
@@ -10,6 +12,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddSingleton<ScoreService>();
 
 builder.Services.AddProblemDetails();
+builder.Services.AddDbContext<LeaderboardDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("Leaderboard")));
 
 var app = builder.Build();
 
