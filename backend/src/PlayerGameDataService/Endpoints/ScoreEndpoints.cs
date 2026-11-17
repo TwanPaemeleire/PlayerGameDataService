@@ -1,3 +1,4 @@
+using PlayerGameDataService.Data;
 using PlayerGameDataService.Models;
 using PlayerGameDataService.Services;
 namespace PlayerGameDataService.Endpoints;
@@ -6,7 +7,6 @@ public static class ScoreEndpoints
 {
     private const int TopRangeStart = 1;
     private const int TopRangeEnd = 100;
-    private const int MaxNameCharLength = 20;
 
     public static void MapScoreEndpoints(this IEndpointRouteBuilder app)
     {
@@ -30,9 +30,9 @@ public static class ScoreEndpoints
             {
                 errors.Add("playerName", ["A player name is required."]);
             }
-            else if (request.PlayerName.Length > MaxNameCharLength)
+            else if (request.PlayerName.Length > Player.MaxNameLength)
             {
-                errors.Add("playerName", [$"Name is too long, max length is {MaxNameCharLength}"]);
+                errors.Add("playerName", [$"Name is too long, max length is {Player.MaxNameLength}"]);
             }
             if (request.Value < 0)
             {

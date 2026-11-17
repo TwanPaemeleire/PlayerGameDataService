@@ -5,4 +5,5 @@ public sealed class Player
     public Guid Id { get; set; }
     public required string Name { get; set; }
     public List<Score> Scores { get; set; } = [];
+    public const int MaxNameLength = 20;
 }
