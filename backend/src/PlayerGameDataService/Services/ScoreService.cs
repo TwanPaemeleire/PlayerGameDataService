@@ -9,11 +9,7 @@ public sealed class ScoreService(LeaderboardDbContext db)
     {
         return await db.Scores
             .OrderByDescending(s => s.SubmittedAt)
-            .Select(s => new ScoreResponse(
-                s.Id,
-                s.Value,
-                s.Player.Name,
-                new DateTimeOffset(s.SubmittedAt, TimeSpan.Zero)))
+            .Select(ScoreResponse.FromScore)
             .ToListAsync();
     }
 
@@ -47,11 +43,7 @@ public sealed class ScoreService(LeaderboardDbContext db)
     {
         return await db.Scores
             .Where(s => s.Id == id)
-            .Select(s => new ScoreResponse(
-                s.Id,
-                s.Value,
-                s.Player.Name,
-                new DateTimeOffset(s.SubmittedAt, TimeSpan.Zero)))
+            .Select(ScoreResponse.FromScore)
             .FirstOrDefaultAsync();
     }
 
@@ -60,12 +52,20 @@ public sealed class ScoreService(LeaderboardDbContext db)
         return await db.Scores
             .OrderByDescending(s => s.Value)
             .ThenBy(s => s.SubmittedAt)
-            .Select(s => new ScoreResponse(
-                s.Id,
-                s.Value,
-                s.Player.Name,
-                new DateTimeOffset(s.SubmittedAt, TimeSpan.Zero)))
             .Take(count)
+            .Select(ScoreResponse.FromScore)
+            .ToListAsync();
+    }
+
+    public async Task<IReadOnlyList<ScoreResponse>> GetTopWeeklyAsync(int count)
+    {
+        var since = DateTime.UtcNow.AddDays(-7);
+        return await db.Scores
+            .Where(s => s.SubmittedAt >= since)
+            .OrderByDescending(s => s.Value)
+            .ThenBy(s => s.SubmittedAt)
+            .Take(count)
+            .Select(ScoreResponse.FromScore)
             .ToListAsync();
     }
 }

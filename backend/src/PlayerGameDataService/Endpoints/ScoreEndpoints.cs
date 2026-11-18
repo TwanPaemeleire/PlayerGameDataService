@@ -55,5 +55,17 @@ public static class ScoreEndpoints
 
             return Results.Ok(await scoreService.GetTopAsync(count));
         }).WithName("GetTopScores");
+
+        group.MapGet("/top/weekly", async (ScoreService scoreService, int count = 10) =>
+        {
+            Dictionary<string, string[]> errors = new();
+            if (count < TopRangeStart || count > TopRangeEnd)
+            {
+                errors.Add("count", [$"Invalid count requested. Allowed range is {TopRangeStart}-{TopRangeEnd}."]);
+            }
+            if (errors.Count != 0) return Results.ValidationProblem(errors);
+
+            return Results.Ok(await scoreService.GetTopWeeklyAsync(count));
+        }).WithName("GetWeeklyTopScores");
     }
 }

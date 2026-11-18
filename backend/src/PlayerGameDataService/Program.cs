@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 
 builder.Services.AddScoped<ScoreService>();
+builder.Services.AddScoped<PlayerService>();
 
 builder.Services.AddProblemDetails();
 builder.Services.AddDbContext<LeaderboardDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("Leaderboard")));
@@ -27,4 +28,5 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapScoreEndpoints();
+app.MapPlayerEndpoints();
 app.Run();

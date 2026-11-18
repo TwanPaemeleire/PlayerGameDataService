@@ -51,3 +51,35 @@ Accept: application/json
 ### Get a score that doesn't exist -> 404
 GET {{PlayerGameDataService_HostAddress}}/scores/00000000-0000-0000-0000-000000000000
 Accept: application/json
+
+### Weekly top scores, default count (10)
+GET {{PlayerGameDataService_HostAddress}}/scores/top/weekly
+Accept: application/json
+
+### Weekly top 3
+GET {{PlayerGameDataService_HostAddress}}/scores/top/weekly?count=3
+Accept: application/json
+
+### Weekly top with an invalid count -> 400 ProblemDetails
+GET {{PlayerGameDataService_HostAddress}}/scores/top/weekly?count=101
+Accept: application/json
+
+### Best score of the player submitted above -> 200 (send "submitScore" first)
+GET {{PlayerGameDataService_HostAddress}}/players/{{submitScore.response.body.$.playerName}}/bestScore
+Accept: application/json
+
+### Best score of a player that doesn't exist -> 404
+GET {{PlayerGameDataService_HostAddress}}/players/NoSuchPlayer/bestScore
+Accept: application/json
+
+### Stats of the player submitted above -> 200 (send "submitScore" first)
+GET {{PlayerGameDataService_HostAddress}}/players/{{submitScore.response.body.$.playerName}}/stats
+Accept: application/json
+
+### Stats of a player that doesn't exist -> 404
+GET {{PlayerGameDataService_HostAddress}}/players/NoSuchPlayer/stats
+Accept: application/json
+
+### Stats with a blank name (a URL-encoded space) -> 400 ProblemDetails
+GET {{PlayerGameDataService_HostAddress}}/players/%20/stats
+Accept: application/json
