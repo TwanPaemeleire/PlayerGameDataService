@@ -15,17 +15,25 @@ public class ScoreTracker : MonoBehaviour
     [SerializeField] private int _scorePerSecond = 50;
     [SerializeField] private int _scorePerAttackSurvived = 500;
 
+    [Header("Difficulty Increase Settings")]
+    [SerializeField] private int _difficultyIncreaseThreshold = 500;
+    [SerializeField] private float _difficultyIncreasePerThreshold = 0.2f;
+
     private int _currentScore = 0;
     private int _currentDisplayingScore = 0;
     private bool _isCounting = false;
     private Coroutine _UICoroutine = null;
     private Coroutine _updateScoreCoroutine = null;
 
+    private float _difficultyMultiplier = 1.0f;
+    public float DifficultyMultiplier => _difficultyMultiplier;
+    private float _lastDifficultyIncreaseAmount = 0.0f;
+
     public void OnAttackFinished()
     {
         if (!_isCounting) return;
         _currentScore += _scorePerAttackSurvived;
-        UpdateUI();
+        OnScoreChange();
     }
 
     private IEnumerator UpdateScore()
@@ -33,13 +41,20 @@ public class ScoreTracker : MonoBehaviour
         while(_isCounting)
         {
             _currentScore += _scorePerSecond;
-            UpdateUI();
+            OnScoreChange();
             yield return new WaitForSeconds(1.0f);
         }
     }
 
-    private void UpdateUI()
+    private void OnScoreChange()
     {
+        if(_currentScore - _lastDifficultyIncreaseAmount >= _difficultyIncreaseThreshold)
+        {
+            _lastDifficultyIncreaseAmount = _currentScore - (_currentScore - _lastDifficultyIncreaseAmount) + _difficultyIncreaseThreshold; // To account for overshoot
+            _difficultyMultiplier += _difficultyIncreasePerThreshold;
+            Debug.Log("Difficulty increased, now: " + _difficultyMultiplier + " With last amount: " + _lastDifficultyIncreaseAmount);
+        }
+
         if (_UICoroutine != null) StopCoroutine(_UICoroutine);
         _UICoroutine = StartCoroutine(UpdateScoreUICoroutine());
         _scorePunchUI.Punch();

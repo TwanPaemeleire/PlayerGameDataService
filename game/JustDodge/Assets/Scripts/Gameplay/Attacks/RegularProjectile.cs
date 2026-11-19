@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class RegularProjectile : ProjectileBase
 {
-    [SerializeField] private float _speed = 50.0f;
+    [SerializeField] private float _baseSpeed = 50.0f;
+    private float _speed = 0.0f;
 
     public override void Despawn()
     {
@@ -11,7 +12,7 @@ public class RegularProjectile : ProjectileBase
 
     public override void InitializeProjectile(float difficultyMultiplier)
     {
-        _speed *= difficultyMultiplier;
+        _speed = _baseSpeed * difficultyMultiplier;
     }
 
     private void Update()

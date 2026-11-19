@@ -27,7 +27,7 @@ public class AttackTriggerHandler : MonoBehaviour
     private IEnumerator AttackAfterDelayCoroutine()
     {
         yield return new WaitForSeconds(_delayBetweenAttacks);
-        int randIndex = Random.Range(0, _attacks.Count - 1);
+        int randIndex = Random.Range(0, _attacks.Count);
         _attacks[randIndex].StartAttack();
     }
 

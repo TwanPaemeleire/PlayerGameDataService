@@ -6,18 +6,22 @@ public class SideTracingAttack : AttackBase
     [SerializeField] private Transform _bulletSpawnPoint;
     [SerializeField] private float _timePerSide = 0.5f;
     [SerializeField] private float _shootDelay = 0.2f;
+    [SerializeField] private float _minimumShootDelay = 0.08f;
+    [SerializeField] private float _angleSpread = 30.0f;
     [SerializeField] private RegularProjectile _projectilePrefab;
     private ArenaSide _currentSide;
+    private float _shootDifficultyDelay = 0.0f;
     public override void StartAttack()
     {
+        _shootDifficultyDelay = _minimumShootDelay + (_shootDelay - _minimumShootDelay) / ScoreTracker.DifficultyMultiplier;
         StartCoroutine(MoveCoroutine());
         StartCoroutine(ShootCoroutine());
     }
 
     private void FullMovementFinished()
     {
-        StopAllCoroutines();
         OnAttackFinished.Invoke();
+        StopAllCoroutines();
     }
 
     private IEnumerator MoveCoroutine()
@@ -37,8 +41,10 @@ public class SideTracingAttack : AttackBase
     {
         while(true)
         {
-            ProjectileSpawner.Instance.Spawn<RegularProjectile>(_projectilePrefab, _bulletSpawnPoint.position, ArenaBounds.GetInwardDirection(_currentSide));
-            yield return new WaitForSeconds(_shootDelay);
+            float offset = Random.Range(-_angleSpread / 2f, _angleSpread / 2f);
+            Vector2 dir = Quaternion.Euler(0f, 0f, offset) * ArenaBounds.GetInwardDirection(_currentSide);
+            ProjectileSpawner.Instance.Spawn(_projectilePrefab, _bulletSpawnPoint.position, dir, 1.0f);
+            yield return new WaitForSeconds(_shootDifficultyDelay);
         }
     }
 }
