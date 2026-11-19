@@ -24,7 +24,6 @@ public class Player : MonoBehaviour
     {
         if (!_isAlive || !_canMove) return;
         if (_currentInput == Vector2.zero && _currentSpeed == 0.0f) return;
-        Debug.Log("Current speed: " + _currentSpeed + " Current input: " + _currentInput);
         Vector2 positionChange = _currentInput * _currentSpeed * Time.deltaTime;
         if (_slowModeEnabled) positionChange *= _slowModeMultiplier;
         transform.position += new Vector3(positionChange.x, positionChange.y, 0.0f);
@@ -63,19 +62,19 @@ public class Player : MonoBehaviour
         if (!_isAlive) return;
         if(collision.gameObject.CompareTag("Projectile"))
         {
+            collision.gameObject.GetComponent<ProjectileBase>().Despawn();
             _isAlive = false;
             _currentInput = Vector2.zero;
             _currentSpeed = 0.0f;
             _speedChangeCoroutine = null;
             _slowModeEnabled = false;
-            GetComponent<Animator>().SetTrigger("Death");
+            GetComponentInChildren<Animator>().SetTrigger("Death");
             OnDeath.Invoke();
         }
     }
 
     private IEnumerator ChangeSpeed(float destSpeed, float timeToReach)
     {
-        Debug.Log("Coroutine started");
         float startSpeed = _currentSpeed;
         float counter = 0.0f;
         while(counter < timeToReach)

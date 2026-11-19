@@ -444,6 +444,9 @@ MonoBehaviour:
   _movementWindUpTime: 0.2
   _timeToFadeIn: 0.5
   _delayBeforeFadeIn: 0.2
+  OnSceneFadeInDone:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &440642435
 Transform:
   m_ObjectHideFlags: 0
@@ -1245,8 +1248,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Just Dodge
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 41d283ad0ccad8745a3507d82e7e30c7, type: 2}
-  m_sharedMaterial: {fileID: 7993163315827501674, guid: 41d283ad0ccad8745a3507d82e7e30c7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9b0564c550a5b964da0ab9326d6b8bbe, type: 2}
+  m_sharedMaterial: {fileID: -7702032449328363369, guid: 9b0564c550a5b964da0ab9326d6b8bbe, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2340,6 +2343,10 @@ PrefabInstance:
     - target: {fileID: 5412516692433353618, guid: bea81e286244c0547ba7025d43da24d3, type: 3}
       propertyPath: m_Name
       value: Arcade
+      objectReference: {fileID: 0}
+    - target: {fileID: 5412516692433353618, guid: bea81e286244c0547ba7025d43da24d3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8048453379166153607, guid: bea81e286244c0547ba7025d43da24d3, type: 3}
       propertyPath: m_LocalPosition.x

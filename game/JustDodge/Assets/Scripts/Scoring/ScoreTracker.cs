@@ -9,7 +9,9 @@ public class ScoreTracker : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _scoreText;
     [SerializeField] private ScoreUIPunch _scorePunchUI;
     [SerializeField] private float _timeToApplyScoreToUI = 0.3f;
+    [SerializeField] private GameOverMenu _gameOverMenu;
 
+    [Header("Score Settings")]
     [SerializeField] private int _scorePerSecond = 50;
     [SerializeField] private int _scorePerAttackSurvived = 500;
 
@@ -69,6 +71,7 @@ public class ScoreTracker : MonoBehaviour
         _isCounting = false;
         StopCoroutine(_updateScoreCoroutine);
         _updateScoreCoroutine = null;
+        _gameOverMenu.OpenMenu(_currentScore);
         // Submit score to leaderboard
     }
 }
