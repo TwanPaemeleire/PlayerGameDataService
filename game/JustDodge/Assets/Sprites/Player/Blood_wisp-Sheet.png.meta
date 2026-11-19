@@ -1,0 +1,1052 @@
+fileFormatVersion: 2
+guid: 8eeedaea0902b1141a0029e04051e5d4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5088333030060751078
+    second: Blood_wisp-Sheet_0
+  - first:
+      213: 5658854684799778074
+    second: Blood_wisp-Sheet_1
+  - first:
+      213: 3400801917143936298
+    second: Blood_wisp-Sheet_2
+  - first:
+      213: -5923071162485673908
+    second: Blood_wisp-Sheet_3
+  - first:
+      213: 6925969276529168257
+    second: Blood_wisp-Sheet_4
+  - first:
+      213: 3516979978395576442
+    second: Blood_wisp-Sheet_5
+  - first:
+      213: 7101426768776320738
+    second: Blood_wisp-Sheet_6
+  - first:
+      213: -2528915770792768924
+    second: Blood_wisp-Sheet_7
+  - first:
+      213: 42987401716939054
+    second: Blood_wisp-Sheet_8
+  - first:
+      213: 8466649963588765318
+    second: Blood_wisp-Sheet_9
+  - first:
+      213: -6024444631889650631
+    second: Blood_wisp-Sheet_10
+  - first:
+      213: 4037885564139953748
+    second: Blood_wisp-Sheet_11
+  - first:
+      213: 5525106368076865476
+    second: Blood_wisp-Sheet_12
+  - first:
+      213: 6320147920535508727
+    second: Blood_wisp-Sheet_13
+  - first:
+      213: 8808533421257597789
+    second: Blood_wisp-Sheet_14
+  - first:
+      213: 2044817435937230134
+    second: Blood_wisp-Sheet_15
+  - first:
+      213: -4268219771889528399
+    second: Blood_wisp-Sheet_16
+  - first:
+      213: -7464038736487983845
+    second: Blood_wisp-Sheet_17
+  - first:
+      213: 1475207062153410493
+    second: Blood_wisp-Sheet_18
+  - first:
+      213: 4228575499149186432
+    second: Blood_wisp-Sheet_19
+  - first:
+      213: -4440497812868209321
+    second: Blood_wisp-Sheet_20
+  - first:
+      213: 5814588570548620945
+    second: Blood_wisp-Sheet_21
+  - first:
+      213: 244490851848386691
+    second: Blood_wisp-Sheet_22
+  - first:
+      213: 4905504981265360571
+    second: Blood_wisp-Sheet_23
+  - first:
+      213: -279377113265397317
+    second: Blood_wisp-Sheet_24
+  - first:
+      213: 7220374270673220710
+    second: Blood_wisp-Sheet_25
+  - first:
+      213: -5184210449512769415
+    second: Blood_wisp-Sheet_26
+  - first:
+      213: -4420245215105691810
+    second: Blood_wisp-Sheet_27
+  - first:
+      213: 5370768416516522515
+    second: Blood_wisp-Sheet_28
+  - first:
+      213: -3905799680814161549
+    second: Blood_wisp-Sheet_29
+  - first:
+      213: 6781542828467781593
+    second: Blood_wisp-Sheet_30
+  - first:
+      213: 6716737206572358309
+    second: Blood_wisp-Sheet_31
+  - first:
+      213: 3731753623798952152
+    second: Blood_wisp-Sheet_32
+  - first:
+      213: 2448130492522534004
+    second: Blood_wisp-Sheet_33
+  - first:
+      213: 7583083840488707804
+    second: Blood_wisp-Sheet_34
+  - first:
+      213: 2949497938495531122
+    second: Blood_wisp-Sheet_35
+  - first:
+      213: -9142298299102940197
+    second: Blood_wisp-Sheet_36
+  - first:
+      213: -3266004529304218202
+    second: Blood_wisp-Sheet_37
+  - first:
+      213: 7883959611657115790
+    second: Blood_wisp-Sheet_38
+  - first:
+      213: -1755815151605628406
+    second: Blood_wisp-Sheet_39
+  - first:
+      213: 4236877036382126283
+    second: Blood_wisp-Sheet_40
+  - first:
+      213: 1071529735277078190
+    second: Blood_wisp-Sheet_41
+  - first:
+      213: -5696454477654884959
+    second: Blood_wisp-Sheet_42
+  - first:
+      213: 9060569934944823273
+    second: Blood_wisp-Sheet_43
+  - first:
+      213: -1157608066954387210
+    second: Blood_wisp-Sheet_44
+  - first:
+      213: -2720653987308277486
+    second: Blood_wisp-Sheet_45
+  - first:
+      213: -1757618467729789005
+    second: Blood_wisp-Sheet_46
+  - first:
+      213: 675926705279363258
+    second: Blood_wisp-Sheet_47
+  - first:
+      213: 202940611384400334
+    second: Blood_wisp-Sheet_48
+  - first:
+      213: -5731061003271526871
+    second: Blood_wisp-Sheet_49
+  - first:
+      213: 4011793797970001239
+    second: Blood_wisp-Sheet_50
+  - first:
+      213: -1620243139746378051
+    second: Blood_wisp-Sheet_51
+  - first:
+      213: 1677392663953713914
+    second: Blood_wisp-Sheet_52
+  - first:
+      213: 5886272916278348052
+    second: Blood_wisp-Sheet_53
+  - first:
+      213: 9194114107893694507
+    second: Blood_wisp-Sheet_54
+  - first:
+      213: 1749683487335183316
+    second: Blood_wisp-Sheet_55
+  - first:
+      213: 7574221530028376628
+    second: Blood_wisp-Sheet_56
+  - first:
+      213: 8747806050778173658
+    second: Blood_wisp-Sheet_57
+  - first:
+      213: 2720130103990518859
+    second: Blood_wisp-Sheet_58
+  - first:
+      213: -966478645503839702
+    second: Blood_wisp-Sheet_59
+  - first:
+      213: 3712267254630244371
+    second: Blood_wisp-Sheet_60
+  - first:
+      213: 7013282164666742517
+    second: Blood_wisp-Sheet_61
+  - first:
+      213: -1236162694579522909
+    second: Blood_wisp-Sheet_62
+  - first:
+      213: 3849100937966359055
+    second: Blood_wisp-Sheet_63
+  - first:
+      213: 2159511763171225419
+    second: Blood_wisp-Sheet_64
+  - first:
+      213: 8658256195942868911
+    second: Blood_wisp-Sheet_65
+  - first:
+      213: -108897340634388745
+    second: Blood_wisp-Sheet_66
+  - first:
+      213: -3926379101952432032
+    second: Blood_wisp-Sheet_67
+  - first:
+      213: 7260824918974804111
+    second: Blood_wisp-Sheet_68
+  - first:
+      213: 5595694547479012500
+    second: Blood_wisp-Sheet_69
+  - first:
+      213: 897876485760648647
+    second: Blood_wisp-Sheet_70
+  - first:
+      213: -2166700328175136471
+    second: Blood_wisp-Sheet_71
+  - first:
+      213: 4892952309107445871
+    second: Blood_wisp-Sheet_72
+  - first:
+      213: -4417512153441252019
+    second: Blood_wisp-Sheet_73
+  - first:
+      213: -2758502869086466707
+    second: Blood_wisp-Sheet_74
+  - first:
+      213: -2277811563225171288
+    second: Blood_wisp-Sheet_75
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a17875c711c9269b0800000000000000
+      internalID: -5088333030060751078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 288
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1dbb0b9a5a488e40800000000000000
+      internalID: 5658854684799778074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 288
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2de4de4353123f20800000000000000
+      internalID: 3400801917143936298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 288
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c407ea4d8260dcda0800000000000000
+      internalID: -5923071162485673908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 288
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f4ac49c5cfd1060800000000000000
+      internalID: 6925969276529168257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 288
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a78ed6618a2dec030800000000000000
+      internalID: 3516979978395576442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 288
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e6dc5f65065d8260800000000000000
+      internalID: 7101426768776320738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 288
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46a8307518c77ecd0800000000000000
+      internalID: -2528915770792768924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 288
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e29b72960d8b89000800000000000000
+      internalID: 42987401716939054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 288
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 686484d98459f7570800000000000000
+      internalID: 8466649963588765318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93c5533b68fd46ca0800000000000000
+      internalID: -6024444631889650631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 144
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e5d36e683790830800000000000000
+      internalID: 4037885564139953748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 144
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cf587fe7fe1dac40800000000000000
+      internalID: 5525106368076865476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 144
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f651735c0da5b750800000000000000
+      internalID: 6320147920535508727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 144
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d53273e1a723e3a70800000000000000
+      internalID: 8808533421257597789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 144
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63d4093cf96a06c10800000000000000
+      internalID: 2044817435937230134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 144
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b1d9314bbc34c4c0800000000000000
+      internalID: -4268219771889528399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 144
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b15d0e9b0586a6890800000000000000
+      internalID: -7464038736487983845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 144
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db73dcdc10df87410800000000000000
+      internalID: 1475207062153410493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 144
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08515b4330beeaa30800000000000000
+      internalID: 4228575499149186432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 755671614ce2062c0800000000000000
+      internalID: -4440497812868209321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19ec8967f7191b050800000000000000
+      internalID: 5814588570548620945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3887147622b946300800000000000000
+      internalID: 244490851848386691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb62b3c3acad31440800000000000000
+      internalID: 4905504981265360571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb12175eef37f1cf0800000000000000
+      internalID: -279377113265397317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 664f8dcd42ce33460800000000000000
+      internalID: 7220374270673220710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9785ce3301cfd08b0800000000000000
+      internalID: -5184210449512769415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5f4185756228a2c0800000000000000
+      internalID: -4420245215105691810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9a6ea73402b6742a6ed86535b310cb
+      internalID: -1849023372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood_wisp-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 160
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e716aae3af4f736498f3d18661113dab
+      internalID: -29179977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 99804990baad8de4c9b60e2034e1d1d3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":10.0,"y":3.0},"gridSpriteSize":{"x":160.0,"y":144.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":true,"isAlternate":false}'
+    nameFileIdTable:
+      Blood_wisp-Sheet_0: -5088333030060751078
+      Blood_wisp-Sheet_1: 5658854684799778074
+      Blood_wisp-Sheet_10: -6024444631889650631
+      Blood_wisp-Sheet_11: 4037885564139953748
+      Blood_wisp-Sheet_12: 5525106368076865476
+      Blood_wisp-Sheet_13: 6320147920535508727
+      Blood_wisp-Sheet_14: 8808533421257597789
+      Blood_wisp-Sheet_15: 2044817435937230134
+      Blood_wisp-Sheet_16: -4268219771889528399
+      Blood_wisp-Sheet_17: -7464038736487983845
+      Blood_wisp-Sheet_18: 1475207062153410493
+      Blood_wisp-Sheet_19: 4228575499149186432
+      Blood_wisp-Sheet_2: 3400801917143936298
+      Blood_wisp-Sheet_20: -4440497812868209321
+      Blood_wisp-Sheet_21: 5814588570548620945
+      Blood_wisp-Sheet_22: 244490851848386691
+      Blood_wisp-Sheet_23: 4905504981265360571
+      Blood_wisp-Sheet_24: -279377113265397317
+      Blood_wisp-Sheet_25: 7220374270673220710
+      Blood_wisp-Sheet_26: -5184210449512769415
+      Blood_wisp-Sheet_27: -4420245215105691810
+      Blood_wisp-Sheet_28: -1849023372
+      Blood_wisp-Sheet_29: -29179977
+      Blood_wisp-Sheet_3: -5923071162485673908
+      Blood_wisp-Sheet_4: 6925969276529168257
+      Blood_wisp-Sheet_5: 3516979978395576442
+      Blood_wisp-Sheet_6: 7101426768776320738
+      Blood_wisp-Sheet_7: -2528915770792768924
+      Blood_wisp-Sheet_8: 42987401716939054
+      Blood_wisp-Sheet_9: 8466649963588765318
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
