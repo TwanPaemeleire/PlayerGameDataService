@@ -2,15 +2,12 @@ using UnityEngine;
 
 public class LeaderboardUI : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private Transform _entriesParent;
+    public void RefreshUI()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        for(int childIdx = 0; childIdx < _entriesParent.childCount; ++childIdx)
+        {
+            Destroy(_entriesParent.GetChild(childIdx));
+        }
     }
 }

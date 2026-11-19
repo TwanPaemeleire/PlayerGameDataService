@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Logging.Abstractions;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
@@ -11,14 +12,17 @@ public class Player : MonoBehaviour
     [SerializeField] private float _slowModeMultiplier = 0.5f;
 
     private bool _isAlive = true;
+    private bool _canMove = false;
     private bool _slowModeEnabled = false;
     private float _currentSpeed = 0.0f;
     private Vector2 _currentInput = Vector2.zero;
     private Coroutine _speedChangeCoroutine = null;
 
+    public UnityEvent OnDeath = new UnityEvent();
+
     public void Update()
     {
-        if (!_isAlive) return;
+        if (!_isAlive || !_canMove) return;
         if (_currentInput == Vector2.zero && _currentSpeed == 0.0f) return;
         Debug.Log("Current speed: " + _currentSpeed + " Current input: " + _currentInput);
         Vector2 positionChange = _currentInput * _currentSpeed * Time.deltaTime;
@@ -26,8 +30,14 @@ public class Player : MonoBehaviour
         transform.position += new Vector3(positionChange.x, positionChange.y, 0.0f);
     }
 
+    public void StartGame()
+    {
+        _canMove = true;
+    }
+
     public void OnMoveInputReceived(InputAction.CallbackContext context)
     {
+        if (!_canMove) return;
         Vector2 newInput = context.ReadValue<Vector2>();
         newInput.Normalize();
 
@@ -59,6 +69,7 @@ public class Player : MonoBehaviour
             _speedChangeCoroutine = null;
             _slowModeEnabled = false;
             GetComponent<Animator>().SetTrigger("Death");
+            OnDeath.Invoke();
         }
     }
 
