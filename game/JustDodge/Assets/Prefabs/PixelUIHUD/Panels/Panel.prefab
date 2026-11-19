@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1425878239416001856}
-  - component: {fileID: 5031696198981001295}
   - component: {fileID: 4221564708922931375}
+  - component: {fileID: 1377363509336898102}
   - component: {fileID: 4134028421277730108}
   m_Layer: 5
   m_Name: Panel
@@ -38,22 +38,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5031696198981001295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 931958476903193482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1426eb2d8395864391b7e65abf64bc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  State: 0
-  Active: {fileID: 21300000, guid: fae8f3935966fba45b0c3c27f1f2163b, type: 3}
-  Inactive: {fileID: 21300000, guid: 4ee6b779b5fdc2742ae6dc9f7a9f07ef, type: 3}
-  Image: {fileID: 4134028421277730108}
 --- !u!222 &4221564708922931375
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -62,6 +46,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931958476903193482}
   m_CullTransparentMesh: 1
+--- !u!114 &1377363509336898102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931958476903193482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c771e99c05553946bd60ee4cfe1e8a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PixelUI.Panel
+  State: 0
+  Active: {fileID: 21300000, guid: fae8f3935966fba45b0c3c27f1f2163b, type: 3}
+  Inactive: {fileID: 21300000, guid: 4ee6b779b5fdc2742ae6dc9f7a9f07ef, type: 3}
+  Image: {fileID: 4134028421277730108}
 --- !u!114 &4134028421277730108
 MonoBehaviour:
   m_ObjectHideFlags: 0

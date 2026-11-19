@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 727705146742405476}
   - component: {fileID: 9074994092373241602}
   - component: {fileID: 7956426457179694533}
-  - component: {fileID: 6464839098639584336}
+  - component: {fileID: 4843147954020582514}
   m_Layer: 5
   m_Name: ButtonA
   m_TagString: Untagged
@@ -145,7 +145,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6464839098639584336
+--- !u!114 &4843147954020582514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,9 +154,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3480084782063382269}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7740951d0d0d4764ca011672f3f42dab, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c85c788c0507b84ab55ac42838c0029, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::PixelUI.Button
   OnSelected:
     m_PersistentCalls:
       m_Calls: []
@@ -233,8 +233,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button A
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c1c8d672bf8c56140a7d6c897fb00391, type: 2}
-  m_sharedMaterial: {fileID: 6494674679066447906, guid: c1c8d672bf8c56140a7d6c897fb00391, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -269,6 +269,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
