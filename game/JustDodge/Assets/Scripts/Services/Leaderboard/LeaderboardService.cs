@@ -7,12 +7,12 @@ using UnityEngine.Networking;
 
 public class LeaderboardService : MonoSingleton<LeaderboardService>
 {
-    [SerializeField] private string _baseUrl = "http://localhost:5269";
+    [SerializeField] private ApiConfig _apiConfig;
 
     public async Task<List<LeaderboardEntry>> GetTop10Scores()
     {
-        using UnityWebRequest request = UnityWebRequest.Get(_baseUrl + "/scores/top");
-        request.timeout = 10;
+        using UnityWebRequest request = UnityWebRequest.Get(_apiConfig.BaseUrl + "/scores/top");
+        request.timeout = _apiConfig.TimeoutSeconds;
         await request.SendWebRequest();
 
         if (request.result == UnityWebRequest.Result.Success)
@@ -31,8 +31,8 @@ public class LeaderboardService : MonoSingleton<LeaderboardService>
     public async Task<SubmitScoreResult> SubmitScore(string playerName, int score)
     {
         string json = JsonUtility.ToJson(new SubmitScoreRequest { playerName = playerName, value = score });
-        using UnityWebRequest request = UnityWebRequest.Post(_baseUrl + "/scores", json, "application/json");
-        request.timeout = 10;
+        using UnityWebRequest request = UnityWebRequest.Post(_apiConfig.BaseUrl + "/scores", json, "application/json");
+        request.timeout = _apiConfig.TimeoutSeconds;
         await request.SendWebRequest();
 
         if (request.result == UnityWebRequest.Result.Success)

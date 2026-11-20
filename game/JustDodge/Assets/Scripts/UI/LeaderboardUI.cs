@@ -9,17 +9,12 @@ public class LeaderboardUI : MonoBehaviour
 
     private void Start()
     {
+        FillRows(null, "...");
         StartCoroutine(RefreshCoroutine());
-    }
-
-    private void OnDestroy()
-    {
-        StopAllCoroutines();
     }
 
     public async void RefreshUI()
     {
-        FillRows(null, "...");
         List<LeaderboardEntry> entries = await LeaderboardService.Instance.GetTop10Scores();
         if (this == null) return;
         if (entries == null)
