@@ -1,3 +1,4 @@
+using PlayerGameDataService.Data;
 using PlayerGameDataService.Models;
 using PlayerGameDataService.Services;
 namespace PlayerGameDataService.Endpoints;
@@ -35,5 +36,23 @@ public static class PlayerEndpoints
             if(response is null) return Results.NotFound("The player doesn't exist.");
             return Results.Ok(response);
         }).WithName("GetPlayerStats");
+
+        group.MapPost("/register", async (PlayerService playerService, RegisterPlayerRequest registerRequest) =>
+        {
+           Dictionary<string, string[]> errors = new();
+            if(string.IsNullOrWhiteSpace(registerRequest.PlayerName))
+            {
+                errors.Add("playerName", ["The name parameter can't be empty."]); 
+            } 
+            else if(registerRequest.PlayerName.Length > Player.MaxNameLength)
+            {
+                errors.Add("playerName", [$"Name is too long, max length is {Player.MaxNameLength}"]);
+            }
+            if(errors.Count != 0) return Results.ValidationProblem(errors);
+
+            RegisterPlayerResponse? response = await playerService.RegisterAsync(registerRequest);
+            if(response is null) return Results.Conflict("This name is already taken.");
+            return Results.CreatedAtRoute("GetPlayerStats", new { playerName = response.PlayerName }, response);
+        }).WithName("RegisterPlayer").RequireRateLimiting(RateLimitPolicies.PerClient);
     }
 }

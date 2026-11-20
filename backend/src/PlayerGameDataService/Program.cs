@@ -1,3 +1,4 @@
+using System.Threading.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using PlayerGameDataService.Data;
 using PlayerGameDataService.Endpoints;
@@ -15,6 +16,15 @@ builder.Services.AddScoped<PlayerService>();
 builder.Services.AddProblemDetails();
 builder.Services.AddDbContext<LeaderboardDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("Leaderboard")));
 
+builder.Services.AddRateLimiter(options =>
+{
+    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+    options.AddPolicy(RateLimitPolicies.PerClient, httpContext =>
+        RateLimitPartition.GetFixedWindowLimiter(
+            httpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+            _ => new FixedWindowRateLimiterOptions { PermitLimit = 10, Window = TimeSpan.FromMinutes(1) }));
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -26,6 +36,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseRateLimiter();
 
 app.MapScoreEndpoints();
 app.MapPlayerEndpoints();

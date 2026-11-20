@@ -7,6 +7,9 @@ using UnityEngine.Networking;
 
 public class LeaderboardService : MonoSingleton<LeaderboardService>
 {
+    private const string TokenKey = "PlayerToken";
+    private const string NameKey = "PlayerName";
+
     [SerializeField] private ApiConfig _apiConfig;
 
     public async Task<List<LeaderboardEntry>> GetTop10Scores()
@@ -28,20 +31,58 @@ public class LeaderboardService : MonoSingleton<LeaderboardService>
         }
     }
 
+    public bool IsRegistered => PlayerPrefs.HasKey(TokenKey) && PlayerPrefs.HasKey(NameKey);
+    public string SavedName => PlayerPrefs.GetString(NameKey, "");
+
     public async Task<SubmitScoreResult> SubmitScore(string playerName, int score)
     {
-        string json = JsonUtility.ToJson(new SubmitScoreRequest { playerName = playerName, value = score });
-        using UnityWebRequest request = UnityWebRequest.Post(_apiConfig.BaseUrl + "/scores", json, "application/json");
-        request.timeout = _apiConfig.TimeoutSeconds;
-        await request.SendWebRequest();
+        if (!IsRegistered)
+        {
+            string requestJson = JsonUtility.ToJson(new RegisterRequest { playerName = playerName });
+            using UnityWebRequest registerRequest = UnityWebRequest.Post(_apiConfig.BaseUrl + "/players/register", requestJson, "application/json");
+            registerRequest.timeout = _apiConfig.TimeoutSeconds;
+            await registerRequest.SendWebRequest();
 
-        if (request.result == UnityWebRequest.Result.Success)
+            if (registerRequest.responseCode == 409)
+            {
+                return new SubmitScoreResult(false, "Name already taken");
+            }
+            if (registerRequest.result != UnityWebRequest.Result.Success)
+            {
+                return ToFailure(registerRequest);
+            }
+
+            RegisterResponse response = JsonUtility.FromJson<RegisterResponse>(registerRequest.downloadHandler.text);
+            PlayerPrefs.SetString(NameKey, response.playerName);
+            PlayerPrefs.SetString(TokenKey, response.token);
+            PlayerPrefs.Save();
+        }
+
+        string json = JsonUtility.ToJson(new SubmitScoreRequest { value = score });
+        using UnityWebRequest scoreSubmitRequest = UnityWebRequest.Post(_apiConfig.BaseUrl + "/scores", json, "application/json");
+        scoreSubmitRequest.SetRequestHeader("Authorization", "Bearer " + PlayerPrefs.GetString(TokenKey));
+        scoreSubmitRequest.timeout = _apiConfig.TimeoutSeconds;
+        await scoreSubmitRequest.SendWebRequest();
+
+        if (scoreSubmitRequest.result == UnityWebRequest.Result.Success)
         {
             return new SubmitScoreResult(true, "Score submitted!");
         }
+        if (scoreSubmitRequest.responseCode == 401)
+        {
+            PlayerPrefs.DeleteKey(TokenKey);
+            PlayerPrefs.DeleteKey(NameKey);
+            PlayerPrefs.Save();
+            return new SubmitScoreResult(false, "Your name expired, pick a name and submit again");
+        }
+        return ToFailure(scoreSubmitRequest);
+    }
+
+    private SubmitScoreResult ToFailure(UnityWebRequest request)
+    {
         if (request.result == UnityWebRequest.Result.ConnectionError)
         {
-            Debug.LogError("Submit failed: " + request.error);
+            Debug.LogError("Request failed: " + request.error);
             return new SubmitScoreResult(false, "Couldn't reach the server, try again");
         }
         if (request.responseCode == 400)
@@ -49,7 +90,7 @@ public class LeaderboardService : MonoSingleton<LeaderboardService>
             return new SubmitScoreResult(false, ParseValidationMessage(request.downloadHandler.text));
         }
 
-        Debug.LogError($"Submit failed ({request.responseCode}): {request.downloadHandler.text}");
+        Debug.LogError($"Request failed ({request.responseCode}): {request.downloadHandler.text}");
         return new SubmitScoreResult(false, $"Server error ({request.responseCode}), try again");
     }
 
@@ -65,8 +106,13 @@ public class LeaderboardService : MonoSingleton<LeaderboardService>
     [Serializable]
     private class SubmitScoreRequest
     {
-        public string playerName;
         public int value;
+    }
+
+    [Serializable]
+    private class RegisterRequest
+    {
+        public string playerName;
     }
 
     [Serializable]
@@ -92,6 +138,13 @@ public class LeaderboardService : MonoSingleton<LeaderboardService>
     {
         LeaderboardEntryList list = JsonUtility.FromJson<LeaderboardEntryList>("{\"entries\":" + json + "}");
         return list?.entries ?? Array.Empty<LeaderboardEntry>();
+    }
+
+    [Serializable]
+    private class RegisterResponse
+    {
+        public string playerName;
+        public string token;
     }
 }
 

@@ -11,5 +11,8 @@ public sealed class LeaderboardDbContext(DbContextOptions<LeaderboardDbContext> 
     {
         modelBuilder.Entity<Player>().HasIndex(p => p.Name).IsUnique();
         modelBuilder.Entity<Player>().Property(p => p.Name).HasMaxLength(Player.MaxNameLength);
+        modelBuilder.Entity<Player>().HasIndex(p => p.TokenHash).IsUnique();
+        modelBuilder.Entity<Player>().HasIndex(p => p.NormalizedName).IsUnique();
+        modelBuilder.Entity<Player>().Property(p => p.NormalizedName).HasMaxLength(Player.MaxNameLength);
     }
 }

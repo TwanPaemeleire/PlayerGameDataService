@@ -22,6 +22,12 @@ public class GameOverMenu : MonoBehaviour
 
     public void OpenMenu(int score)
     {
+        if(LeaderboardService.Instance.IsRegistered)
+        {
+            _nameInput.interactable = false;
+            _nameInput.text = LeaderboardService.Instance.SavedName;
+        }
+
         _currentScore = score;
         StopAllCoroutines();
         SetInteractable(true);
@@ -58,7 +64,7 @@ public class GameOverMenu : MonoBehaviour
         else
         {
             _submitButton.interactable = true;
-            _nameInput.interactable = true;
+            _nameInput.interactable = !LeaderboardService.Instance.IsRegistered;
         }
     }
 

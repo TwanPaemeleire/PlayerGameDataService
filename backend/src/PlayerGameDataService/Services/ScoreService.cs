@@ -13,30 +13,19 @@ public sealed class ScoreService(LeaderboardDbContext db)
             .ToListAsync();
     }
 
-    public async Task<ScoreResponse> AddAsync(SubmitScoreRequest request)
+    public async Task<ScoreResponse> AddAsync(Guid playerId, int value)
     {
-        Player? playerResult = await db.Players.FirstOrDefaultAsync(p => p.Name == request.PlayerName);
-        if (playerResult is null)
-        {
-            playerResult = new Player { Id = Guid.CreateVersion7(), Name = request.PlayerName };
-            db.Players.Add(playerResult);
-        }
-
         Score newScore = new Score
         {
             Id = Guid.CreateVersion7(),
-            Player = playerResult,
-            PlayerId = playerResult.Id,
+            PlayerId = playerId,
             SubmittedAt = DateTime.UtcNow,
-            Value = request.Value
+            Value = value
         };
         db.Scores.Add(newScore);
         await db.SaveChangesAsync();
 
-        return new ScoreResponse(newScore.Id,
-                                 newScore.Value,
-                                 newScore.Player.Name,
-                                 new DateTimeOffset(newScore.SubmittedAt, TimeSpan.Zero));
+        return (await FindByIdAsync(newScore.Id))!;
     }
 
     public async Task<ScoreResponse?> FindByIdAsync(Guid id)
@@ -49,7 +38,12 @@ public sealed class ScoreService(LeaderboardDbContext db)
 
     public async Task<IReadOnlyList<ScoreResponse>> GetTopAsync(int count)
     {
-        return await db.Scores
+        return await db.Players
+            .Where(p => p.Scores.Any())
+            .Select(p => p.Scores
+                .OrderByDescending(s => s.Value)
+                .ThenBy(s => s.SubmittedAt)
+                .First())
             .OrderByDescending(s => s.Value)
             .ThenBy(s => s.SubmittedAt)
             .Take(count)
@@ -60,8 +54,13 @@ public sealed class ScoreService(LeaderboardDbContext db)
     public async Task<IReadOnlyList<ScoreResponse>> GetTopWeeklyAsync(int count)
     {
         var since = DateTime.UtcNow.AddDays(-7);
-        return await db.Scores
-            .Where(s => s.SubmittedAt >= since)
+        return await db.Players
+            .Where(p => p.Scores.Any(s => s.SubmittedAt >= since))
+            .Select(p => p.Scores
+                .Where(s => s.SubmittedAt >= since)
+                .OrderByDescending(s => s.Value)
+                .ThenBy(s => s.SubmittedAt)
+                .First())
             .OrderByDescending(s => s.Value)
             .ThenBy(s => s.SubmittedAt)
             .Take(count)

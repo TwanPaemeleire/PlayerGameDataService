@@ -1,4 +1,3 @@
-using PlayerGameDataService.Data;
 using PlayerGameDataService.Models;
 using PlayerGameDataService.Services;
 namespace PlayerGameDataService.Endpoints;
@@ -23,26 +22,29 @@ public static class ScoreEndpoints
             return (foundScore == null) ? Results.NotFound() : Results.Ok(foundScore);
         }).WithName("GetScoreById");
 
-        group.MapPost("/", async (SubmitScoreRequest request, ScoreService scoreService) =>
+        group.MapPost("/", async (SubmitScoreRequest request, HttpRequest httpRequest, ScoreService scoreService, PlayerService playerService) =>
         {
+            const string bearerPrefix = "Bearer ";
+            string? authorization = httpRequest.Headers.Authorization;
+            if (authorization is null || !authorization.StartsWith(bearerPrefix, StringComparison.OrdinalIgnoreCase))
+            {
+                return Results.Unauthorized();
+            }
+
+            string token = authorization[bearerPrefix.Length..].Trim();
+            Guid? playerId = string.IsNullOrEmpty(token) ? null : await playerService.FindIdByTokenAsync(token);
+            if (playerId is null) return Results.Unauthorized();
+
             Dictionary<string, string[]> errors = new();
-            if (string.IsNullOrWhiteSpace(request.PlayerName))
-            {
-                errors.Add("playerName", ["A player name is required."]);
-            }
-            else if (request.PlayerName.Length > Player.MaxNameLength)
-            {
-                errors.Add("playerName", [$"Name is too long, max length is {Player.MaxNameLength}"]);
-            }
             if (request.Value < 0)
             {
                 errors.Add("value", ["The score value can't be below 0."]);
             }
             if (errors.Count != 0) return Results.ValidationProblem(errors);
 
-            ScoreResponse newScore = await scoreService.AddAsync(request);
+            ScoreResponse newScore = await scoreService.AddAsync(playerId.Value, request.Value);
             return Results.CreatedAtRoute("GetScoreById", new { id = newScore.Id }, newScore);
-        }).WithName("SubmitScore");
+        }).WithName("SubmitScore").RequireRateLimiting(RateLimitPolicies.PerClient);
 
         group.MapGet("/top", async (ScoreService scoreService, int count = 10) =>
         {

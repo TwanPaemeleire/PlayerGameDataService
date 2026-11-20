@@ -16,31 +16,72 @@ Accept: application/json
 GET {{PlayerGameDataService_HostAddress}}/scores/top?count=0
 Accept: application/json
 
-### Submit a valid score -> 201 Created + Location header
+### Register a new player -> 201 with a token (random name, so it can be re-run)
+# @name register
+POST {{PlayerGameDataService_HostAddress}}/players/register
+Content-Type: application/json
+
+{
+  "playerName": "Tester{{$randomInt 100 999}}"
+}
+
+### Register the same name again -> 409 (send "register" first)
+POST {{PlayerGameDataService_HostAddress}}/players/register
+Content-Type: application/json
+
+{
+  "playerName": "{{register.response.body.$.playerName}}"
+}
+
+### Register a blank name -> 400
+POST {{PlayerGameDataService_HostAddress}}/players/register
+Content-Type: application/json
+
+{
+  "playerName": " "
+}
+
+### Register a name that is too long -> 400
+POST {{PlayerGameDataService_HostAddress}}/players/register
+Content-Type: application/json
+
+{
+  "playerName": "ThisNameIsWayTooLongForTheBoard"
+}
+
+### Submit a valid score with the token -> 201 Created + Location header (send "register" first)
 # @name submitScore
 POST {{PlayerGameDataService_HostAddress}}/scores
 Content-Type: application/json
+Authorization: Bearer {{register.response.body.$.token}}
 
 {
-  "playerName": "Twan",
   "value": 999
 }
 
-### Submit an invalid score -> 400 with both errors
+### Submit a negative score -> 400 (send "register" first)
 POST {{PlayerGameDataService_HostAddress}}/scores
 Content-Type: application/json
+Authorization: Bearer {{register.response.body.$.token}}
 
 {
-  "playerName": "",
   "value": -5
 }
 
-### Submit a name that is too long -> 400
+### Submit without a token -> 401
 POST {{PlayerGameDataService_HostAddress}}/scores
 Content-Type: application/json
 
 {
-  "playerName": "ThisNameIsWayTooLongForTheBoard",
+  "value": 10
+}
+
+### Submit with a made-up token -> 401
+POST {{PlayerGameDataService_HostAddress}}/scores
+Content-Type: application/json
+Authorization: Bearer not-a-real-token
+
+{
   "value": 10
 }
 
