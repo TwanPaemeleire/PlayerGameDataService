@@ -2,27 +2,20 @@ using UnityEngine;
 
 public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T>
 {
-    static T _instance;
-    static bool hasBeenCreated;
+    private static T _instance;
+    private static bool _isQuitting;
+
     public static T Instance
     {
         get
         {
-            if (_instance == null)
+            if (_instance == null && !_isQuitting)
             {
                 _instance = FindAnyObjectByType<T>();
                 if (_instance == null)
                 {
-                    if (!hasBeenCreated)
-                        _instance = new GameObject("_" + typeof(T), typeof(T)).GetComponent<T>();
+                    new GameObject("_" + typeof(T).Name, typeof(T));
                 }
-                else
-                {
-                    hasBeenCreated = true;
-                    DontDestroyOnLoad(_instance);
-                    _instance.Init();
-                }
-                return _instance;
             }
             return _instance;
         }
@@ -30,13 +23,22 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
 
     private void Awake()
     {
-        DontDestroyOnLoad(this);
-        if (Instance == null)
+        if (_instance != null && _instance != this)
         {
-            _instance = this as T;
-            hasBeenCreated = true;
-            Instance.Init();
+            Destroy(gameObject);
+            return;
         }
+
+        _instance = (T)this;
+        transform.SetParent(null);
+        DontDestroyOnLoad(gameObject);
+        Init();
     }
+
+    private void OnApplicationQuit()
+    {
+        _isQuitting = true;
+    }
+
     protected virtual void Init() { }
 }

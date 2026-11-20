@@ -27,7 +27,7 @@ public class ScoreTracker : MonoBehaviour
 
     private float _difficultyMultiplier = 1.0f;
     public float DifficultyMultiplier => _difficultyMultiplier;
-    private float _lastDifficultyIncreaseAmount = 0.0f;
+    private int _lastDifficultyIncreaseAmount = 0;
 
     public void OnAttackFinished()
     {
@@ -48,11 +48,10 @@ public class ScoreTracker : MonoBehaviour
 
     private void OnScoreChange()
     {
-        if(_currentScore - _lastDifficultyIncreaseAmount >= _difficultyIncreaseThreshold)
+        while(_currentScore - _lastDifficultyIncreaseAmount >= _difficultyIncreaseThreshold)
         {
-            _lastDifficultyIncreaseAmount = _currentScore - (_currentScore - _lastDifficultyIncreaseAmount) + _difficultyIncreaseThreshold; // To account for overshoot
+            _lastDifficultyIncreaseAmount += _difficultyIncreaseThreshold;
             _difficultyMultiplier += _difficultyIncreasePerThreshold;
-            Debug.Log("Difficulty increased, now: " + _difficultyMultiplier + " With last amount: " + _lastDifficultyIncreaseAmount);
         }
 
         if (_UICoroutine != null) StopCoroutine(_UICoroutine);
@@ -62,7 +61,6 @@ public class ScoreTracker : MonoBehaviour
 
     private IEnumerator UpdateScoreUICoroutine()
     {
-        int startScore = _currentDisplayingScore;
         float counter = 0.0f;
         while(counter < _timeToApplyScoreToUI)
         {
