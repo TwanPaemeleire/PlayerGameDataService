@@ -79,6 +79,13 @@ public class ArenaBounds : MonoBehaviour
         return point.x >= Min.x && point.x <= Max.x && point.y >= Min.y && point.y <= Max.y;
     }
 
+    public Vector2 ClampPoint(Vector2 point, float padding)
+    {
+        return new Vector2(
+            Mathf.Clamp(point.x, Min.x + padding, Max.x - padding),
+            Mathf.Clamp(point.y, Min.y + padding, Max.y - padding));
+    }
+
     private void GetSideEnds(ArenaSide side, out Vector2 start, out Vector2 end)
     {
         Vector2 topLeft = new Vector2(Min.x, Max.y);

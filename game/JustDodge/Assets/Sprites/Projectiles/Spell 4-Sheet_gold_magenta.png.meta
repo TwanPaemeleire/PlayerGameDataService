@@ -1,0 +1,1192 @@
+fileFormatVersion: 2
+guid: 798fb097b46777342a7fc13ace8c2497
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4811308197298492361
+    second: Spell 4-Sheet_gold_magenta_0
+  - first:
+      213: -6910478202980685135
+    second: Spell 4-Sheet_gold_magenta_1
+  - first:
+      213: 8257804960863180764
+    second: Spell 4-Sheet_gold_magenta_2
+  - first:
+      213: -8542717643128851349
+    second: Spell 4-Sheet_gold_magenta_3
+  - first:
+      213: 4962127480057736491
+    second: Spell 4-Sheet_gold_magenta_4
+  - first:
+      213: -449471272087309117
+    second: Spell 4-Sheet_gold_magenta_5
+  - first:
+      213: 3651338429100309426
+    second: Spell 4-Sheet_gold_magenta_6
+  - first:
+      213: 7515942094699993088
+    second: Spell 4-Sheet_gold_magenta_7
+  - first:
+      213: 818444473919722076
+    second: Spell 4-Sheet_gold_magenta_8
+  - first:
+      213: -6775230560015218821
+    second: Spell 4-Sheet_gold_magenta_9
+  - first:
+      213: -4749465490420124934
+    second: Spell 4-Sheet_gold_magenta_10
+  - first:
+      213: 2917668999293632481
+    second: Spell 4-Sheet_gold_magenta_11
+  - first:
+      213: 1384440865965192860
+    second: Spell 4-Sheet_gold_magenta_12
+  - first:
+      213: 404478802392182741
+    second: Spell 4-Sheet_gold_magenta_13
+  - first:
+      213: 562489350287818582
+    second: Spell 4-Sheet_gold_magenta_14
+  - first:
+      213: -2836688807436126491
+    second: Spell 4-Sheet_gold_magenta_15
+  - first:
+      213: -7773683350412341931
+    second: Spell 4-Sheet_gold_magenta_16
+  - first:
+      213: -2559277055645311580
+    second: Spell 4-Sheet_gold_magenta_17
+  - first:
+      213: -7927313258153740038
+    second: Spell 4-Sheet_gold_magenta_18
+  - first:
+      213: -4071943599005134190
+    second: Spell 4-Sheet_gold_magenta_19
+  - first:
+      213: 2683431466274068951
+    second: Spell 4-Sheet_gold_magenta_20
+  - first:
+      213: -7839251889445742888
+    second: Spell 4-Sheet_gold_magenta_21
+  - first:
+      213: 5753185148144419002
+    second: Spell 4-Sheet_gold_magenta_22
+  - first:
+      213: 1750936004821807151
+    second: Spell 4-Sheet_gold_magenta_23
+  - first:
+      213: -3071650263826153744
+    second: Spell 4-Sheet_gold_magenta_24
+  - first:
+      213: 6316125454851810064
+    second: Spell 4-Sheet_gold_magenta_25
+  - first:
+      213: 7311807061008328735
+    second: Spell 4-Sheet_gold_magenta_26
+  - first:
+      213: 3741185958575275414
+    second: Spell 4-Sheet_gold_magenta_27
+  - first:
+      213: 8961003214522116582
+    second: Spell 4-Sheet_gold_magenta_28
+  - first:
+      213: 5699293487832231616
+    second: Spell 4-Sheet_gold_magenta_29
+  - first:
+      213: 2313771989563868651
+    second: Spell 4-Sheet_gold_magenta_30
+  - first:
+      213: -8764545620543880183
+    second: Spell 4-Sheet_gold_magenta_31
+  - first:
+      213: -196123616381937240
+    second: Spell 4-Sheet_gold_magenta_32
+  - first:
+      213: 7933837456686067935
+    second: Spell 4-Sheet_gold_magenta_33
+  - first:
+      213: 5537251027150790151
+    second: Spell 4-Sheet_gold_magenta_34
+  - first:
+      213: 4042713366230881098
+    second: Spell 4-Sheet_gold_magenta_35
+  - first:
+      213: -460410655180244210
+    second: Spell 4-Sheet_gold_magenta_36
+  - first:
+      213: 8877233704107082721
+    second: Spell 4-Sheet_gold_magenta_37
+  - first:
+      213: 6604560647759891529
+    second: Spell 4-Sheet_gold_magenta_38
+  - first:
+      213: 2502352869360443303
+    second: Spell 4-Sheet_gold_magenta_39
+  - first:
+      213: 992311550363676948
+    second: Spell 4-Sheet_gold_magenta_40
+  - first:
+      213: 699531342015923588
+    second: Spell 4-Sheet_gold_magenta_41
+  - first:
+      213: 8079038626991231109
+    second: Spell 4-Sheet_gold_magenta_42
+  - first:
+      213: -4596265817072241482
+    second: Spell 4-Sheet_gold_magenta_43
+  - first:
+      213: 744627956274444920
+    second: Spell 4-Sheet_gold_magenta_44
+  - first:
+      213: 7246760339695914031
+    second: Spell 4-Sheet_gold_magenta_45
+  - first:
+      213: 7918140796764503947
+    second: Spell 4-Sheet_gold_magenta_46
+  - first:
+      213: -1863204561238123986
+    second: Spell 4-Sheet_gold_magenta_47
+  - first:
+      213: 705715374788470548
+    second: Spell 4-Sheet_gold_magenta_48
+  - first:
+      213: -1744782531932113004
+    second: Spell 4-Sheet_gold_magenta_49
+  - first:
+      213: -444881116538056095
+    second: Spell 4-Sheet_gold_magenta_50
+  - first:
+      213: 4151319493774699
+    second: Spell 4-Sheet_gold_magenta_51
+  - first:
+      213: -92873739185843198
+    second: Spell 4-Sheet_gold_magenta_52
+  - first:
+      213: 7031044728511072916
+    second: Spell 4-Sheet_gold_magenta_53
+  - first:
+      213: -3893418766127283102
+    second: Spell 4-Sheet_gold_magenta_54
+  - first:
+      213: 4798972509757738308
+    second: Spell 4-Sheet_gold_magenta_55
+  - first:
+      213: 1033118637219290102
+    second: Spell 4-Sheet_gold_magenta_56
+  - first:
+      213: -9192758531358255840
+    second: Spell 4-Sheet_gold_magenta_57
+  - first:
+      213: -3703202682647046233
+    second: Spell 4-Sheet_gold_magenta_58
+  - first:
+      213: 1031918557571985989
+    second: Spell 4-Sheet_gold_magenta_59
+  - first:
+      213: 8572697832995512015
+    second: Spell 4-Sheet_gold_magenta_60
+  - first:
+      213: -2256819479959524391
+    second: Spell 4-Sheet_gold_magenta_61
+  - first:
+      213: 2007028582957588471
+    second: Spell 4-Sheet_gold_magenta_62
+  - first:
+      213: -148732038193307881
+    second: Spell 4-Sheet_gold_magenta_63
+  - first:
+      213: 6180409275786797935
+    second: Spell 4-Sheet_gold_magenta_64
+  - first:
+      213: 3663992486362051794
+    second: Spell 4-Sheet_gold_magenta_65
+  - first:
+      213: 8032292213193520626
+    second: Spell 4-Sheet_gold_magenta_66
+  - first:
+      213: -4825813034274158927
+    second: Spell 4-Sheet_gold_magenta_67
+  - first:
+      213: 1653642340296280748
+    second: Spell 4-Sheet_gold_magenta_68
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 608
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c3d6e4605335c240800000000000000
+      internalID: 4811308197298492361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 608
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1baa14b00bc0910a0800000000000000
+      internalID: -6910478202980685135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 608
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd755b43cdd999270800000000000000
+      internalID: 8257804960863180764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 608
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b64b7d8909b227980800000000000000
+      internalID: -8542717643128851349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 608
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2dab0317a40dd440800000000000000
+      internalID: 4962127480057736491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_5
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 608
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c43e7a624823c9f0800000000000000
+      internalID: -449471272087309117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_6
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 608
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bbb145a4f82ca230800000000000000
+      internalID: 3651338429100309426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_7
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 608
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0089ff2938dfd4860800000000000000
+      internalID: 7515942094699993088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_8
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 608
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c52dd58a9e2bb5b00800000000000000
+      internalID: 818444473919722076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_9
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 608
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b770ceec3bb89f1a0800000000000000
+      internalID: -6775230560015218821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 304
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af2388adc42861eb0800000000000000
+      internalID: -4749465490420124934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 304
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eff0131f74ad7820800000000000000
+      internalID: 2917668999293632481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_12
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 304
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c96b36ce1a5863310800000000000000
+      internalID: 1384440865965192860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_13
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 304
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dfe2c7e35ffc9500800000000000000
+      internalID: 404478802392182741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_14
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 304
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65f78d9751d5ec700800000000000000
+      internalID: 562489350287818582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_15
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 304
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e6717e1f8e02a8d0800000000000000
+      internalID: -2836688807436126491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_16
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 304
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55dcd46fd245e1490800000000000000
+      internalID: -7773683350412341931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_17
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 304
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ad1478d31f9b7cd0800000000000000
+      internalID: -2559277055645311580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_18
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 304
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af87088a7968cf190800000000000000
+      internalID: -7927313258153740038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_19
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 304
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2929fdbeedc8d77c0800000000000000
+      internalID: -4071943599005134190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d91f5e73b67d3520800000000000000
+      internalID: 2683431466274068951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d6d6c0d0f1653390800000000000000
+      internalID: -7839251889445742888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_22
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab0833a196b67df40800000000000000
+      internalID: 5753185148144419002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_23
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2078dff4039c4810800000000000000
+      internalID: 1750936004821807151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_24
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fe386efb5e4f55d0800000000000000
+      internalID: -3071650263826153744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_25
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 013ae3d03a267a750800000000000000
+      internalID: 6316125454851810064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_26
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f18289948c1c87560800000000000000
+      internalID: 7311807061008328735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_27
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69dfe83cecc5be330800000000000000
+      internalID: 3741185958575275414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_28
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e969b832f0eb5c70800000000000000
+      internalID: 8961003214522116582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_29
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ceefe42b35f71f40800000000000000
+      internalID: 5699293487832231616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_30
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be504399d5b2c1020800000000000000
+      internalID: 2313771989563868651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_31
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 0
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 904c6c5d1341e5680800000000000000
+      internalID: -8764545620543880183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_32
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a95d792c9a374df0800000000000000
+      internalID: -196123616381937240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_33
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 0
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd0367fa127aa1e60800000000000000
+      internalID: 7933837456686067935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_34
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 0
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e5d79b87448dc40800000000000000
+      internalID: 5537251027150790151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_35
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a435aea236a9a1830800000000000000
+      internalID: 4042713366230881098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell 4-Sheet_gold_magenta_36
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 160
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0b3d2fc2fa4c99f0800000000000000
+      internalID: -460410655180244210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d5577692ce145774ab8fee07d871f164
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":17.0,"y":3.0},"gridSpriteSize":{"x":160.0,"y":304.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Spell 4-Sheet_gold_magenta_0: 4811308197298492361
+      Spell 4-Sheet_gold_magenta_1: -6910478202980685135
+      Spell 4-Sheet_gold_magenta_10: -4749465490420124934
+      Spell 4-Sheet_gold_magenta_11: 2917668999293632481
+      Spell 4-Sheet_gold_magenta_12: 1384440865965192860
+      Spell 4-Sheet_gold_magenta_13: 404478802392182741
+      Spell 4-Sheet_gold_magenta_14: 562489350287818582
+      Spell 4-Sheet_gold_magenta_15: -2836688807436126491
+      Spell 4-Sheet_gold_magenta_16: -7773683350412341931
+      Spell 4-Sheet_gold_magenta_17: -2559277055645311580
+      Spell 4-Sheet_gold_magenta_18: -7927313258153740038
+      Spell 4-Sheet_gold_magenta_19: -4071943599005134190
+      Spell 4-Sheet_gold_magenta_2: 8257804960863180764
+      Spell 4-Sheet_gold_magenta_20: 2683431466274068951
+      Spell 4-Sheet_gold_magenta_21: -7839251889445742888
+      Spell 4-Sheet_gold_magenta_22: 5753185148144419002
+      Spell 4-Sheet_gold_magenta_23: 1750936004821807151
+      Spell 4-Sheet_gold_magenta_24: -3071650263826153744
+      Spell 4-Sheet_gold_magenta_25: 6316125454851810064
+      Spell 4-Sheet_gold_magenta_26: 7311807061008328735
+      Spell 4-Sheet_gold_magenta_27: 3741185958575275414
+      Spell 4-Sheet_gold_magenta_28: 8961003214522116582
+      Spell 4-Sheet_gold_magenta_29: 5699293487832231616
+      Spell 4-Sheet_gold_magenta_3: -8542717643128851349
+      Spell 4-Sheet_gold_magenta_30: 2313771989563868651
+      Spell 4-Sheet_gold_magenta_31: -8764545620543880183
+      Spell 4-Sheet_gold_magenta_32: -196123616381937240
+      Spell 4-Sheet_gold_magenta_33: 7933837456686067935
+      Spell 4-Sheet_gold_magenta_34: 5537251027150790151
+      Spell 4-Sheet_gold_magenta_35: 4042713366230881098
+      Spell 4-Sheet_gold_magenta_36: -460410655180244210
+      Spell 4-Sheet_gold_magenta_4: 4962127480057736491
+      Spell 4-Sheet_gold_magenta_5: -449471272087309117
+      Spell 4-Sheet_gold_magenta_6: 3651338429100309426
+      Spell 4-Sheet_gold_magenta_7: 7515942094699993088
+      Spell 4-Sheet_gold_magenta_8: 818444473919722076
+      Spell 4-Sheet_gold_magenta_9: -6775230560015218821
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

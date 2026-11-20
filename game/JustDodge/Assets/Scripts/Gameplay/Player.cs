@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float _timeToAccelerate = 0.1f;
     [SerializeField] private float _timeToDecelerate = 0.1f;
     [SerializeField] private float _slowModeMultiplier = 0.5f;
+    [SerializeField] private ArenaBounds _arenaBounds;
+    [SerializeField] private float _edgePadding = 0.1f;
 
     private bool _isAlive = true;
     private bool _canMove = false;
@@ -26,7 +28,9 @@ public class Player : MonoBehaviour
         if (_currentInput == Vector2.zero && _currentSpeed == 0.0f) return;
         Vector2 positionChange = _currentInput * _currentSpeed * Time.deltaTime;
         if (_slowModeEnabled) positionChange *= _slowModeMultiplier;
-        transform.position += new Vector3(positionChange.x, positionChange.y, 0.0f);
+        Vector2 newPosition = (Vector2)transform.position + positionChange;
+        newPosition = _arenaBounds.ClampPoint(newPosition, _edgePadding);
+        transform.position = new Vector3(newPosition.x, newPosition.y, transform.position.z);
     }
 
     public void StartGame()
