@@ -14,7 +14,7 @@ builder.Services.AddScoped<ScoreService>();
 builder.Services.AddScoped<PlayerService>();
 
 builder.Services.AddProblemDetails();
-builder.Services.AddDbContext<LeaderboardDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("Leaderboard")));
+builder.Services.AddDbContext<LeaderboardDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("Leaderboard")));
 
 builder.Services.AddRateLimiter(options =>
 {
@@ -26,6 +26,11 @@ builder.Services.AddRateLimiter(options =>
 });
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    scope.ServiceProvider.GetRequiredService<LeaderboardDbContext>().Database.Migrate();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

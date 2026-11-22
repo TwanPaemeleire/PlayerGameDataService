@@ -1,0 +1,25 @@
+name: justdodge
+
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_PASSWORD: devpassword
+      POSTGRES_DB: leaderboard
+    ports:
+      - "5432:5432"
+    volumes:
+      - leaderboard-data:/var/lib/postgresql/data
+
+  api:
+    build: ./backend/src/PlayerGameDataService
+    ports:
+      - "5269:8080"
+    environment:
+      ConnectionStrings__Leaderboard: "Host=db;Port=5432;Database=leaderboard;Username=postgres;Password=devpassword"
+    depends_on:
+      - db
+    restart: on-failure
+
+volumes:
+  leaderboard-data:
