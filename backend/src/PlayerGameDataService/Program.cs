@@ -14,6 +14,7 @@ builder.Services.AddScoped<ScoreService>();
 builder.Services.AddScoped<PlayerService>();
 
 builder.Services.AddProblemDetails();
+builder.Services.AddHealthChecks();
 builder.Services.AddDbContext<LeaderboardDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("Leaderboard")));
 
 builder.Services.AddRateLimiter(options =>
@@ -45,4 +46,5 @@ app.UseRateLimiter();
 
 app.MapScoreEndpoints();
 app.MapPlayerEndpoints();
+app.MapHealthChecks("/health");
 app.Run();
