@@ -2783,7 +2783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800567e39c098f840b02703f233c979c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LeaderboardService
-  _apiConfig: {fileID: 11400000, guid: 53d1294d4149a414393efc1f5f7032b2, type: 2}
+  _apiConfig: {fileID: 11400000, guid: 8f8111226b701784fb22cd72280efabb, type: 2}
 --- !u!4 &1664597398
 Transform:
   m_ObjectHideFlags: 0

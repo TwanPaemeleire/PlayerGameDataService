@@ -70,3 +70,5 @@ crashlytics-build.properties
 # OS junk
 .DS_Store
 Thumbs.db
+
+/[Dd]ata/

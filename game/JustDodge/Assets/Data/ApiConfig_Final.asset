@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70becb99f6e540e459a3fa586809d73e, type: 3}
   m_Name: ApiConfig_Final
   m_EditorClassIdentifier: Assembly-CSharp::ApiConfig
-  _baseUrl: httpS://website.com
+  _baseUrl: https://playergamedataservice.onrender.com
   _timeoutSeconds: 10

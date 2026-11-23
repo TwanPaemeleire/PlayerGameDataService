@@ -26,6 +26,12 @@ builder.Services.AddRateLimiter(options =>
             _ => new FixedWindowRateLimiterOptions { PermitLimit = 10, Window = TimeSpan.FromMinutes(1) }));
 });
 
+builder.Services.AddCors(options => 
+    options.AddDefaultPolicy(policy =>
+    policy.WithOrigins("https://html.itch.zone", "https://html-classic.itch.zone")
+          .AllowAnyHeader()
+          .AllowAnyMethod()));
+
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
@@ -42,6 +48,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors();
 app.UseRateLimiter();
 
 app.MapScoreEndpoints();
