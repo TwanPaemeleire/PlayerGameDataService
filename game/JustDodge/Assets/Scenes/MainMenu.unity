@@ -1189,6 +1189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d54eb0adbd622b040b86199e29d51a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuitButton
+  _pageUrl: https://choclified.itch.io/just-dodge
 --- !u!1 &677090300
 GameObject:
   m_ObjectHideFlags: 0
