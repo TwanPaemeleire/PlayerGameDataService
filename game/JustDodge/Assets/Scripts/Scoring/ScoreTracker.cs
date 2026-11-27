@@ -76,6 +76,7 @@ public class ScoreTracker : MonoBehaviour
     {
         _isCounting = true;
         _currentScore = 0;
+        LeaderboardService.Instance.StartRun();
         _updateScoreCoroutine = StartCoroutine(UpdateScore());
     }
 

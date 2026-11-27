@@ -18,7 +18,8 @@ flowchart LR
 1. After a run, the player types a name (3 to 5 characters) and submits their score.
 2. On the first submit, the game registers the name and receives a secret token, which it stores locally.
 3. Every score submit sends that token as a `Bearer` header, so nobody can post scores under someone else's name.
-4. The main menu shows the global top 10, with each player's best score only, and refreshes it automatically.
+4. Each run gets a server-side run id when it starts, so the server can check that a score is possible for how long the run lasted.
+5. The main menu shows the global top 10, with each player's best score only, and refreshes it automatically.
 
 ## Tech stack
 
@@ -34,22 +35,10 @@ flowchart LR
 
 - **Password-free identity:** players only pick a name. The server hands out a random 256-bit token and stores only its SHA-256 hash.
 - **Leaderboards:** all-time top lists show one entry per player, with their best score.
-- **Rate limiting:** register and submit are limited to 10 requests per minute per IP, using the real client IP behind the host's proxy.
+- **Score verification:** the game starts a run on the server when gameplay begins. A score is only accepted for a known run, only once, and only if it's possible for the time that has passed.
+- **Strict names:** 3 to 5 letters or digits, checked on the server, not just in the game.
+- **Rate limiting:** 5 new names per hour and 20 runs or submits per minute per IP, using the real client IP behind the host's proxy.
 - **Production ready:** migrations run on startup, secrets come from environment variables, `/health` endpoint, CORS limited to itch.io.
-
-## API
-
-| Method | Route | Description |
-|---|---|---|
-| `POST` | `/players/register` | Register a name, returns a token |
-| `POST` | `/scores` | Submit a score (`Authorization: Bearer <token>`) |
-| `GET` | `/scores/top?count=10` | All-time top scores, one per player |
-| `GET` | `/scores/top/weekly?count=10` | Top scores of the last 7 days |
-| `GET` | `/scores/{id}` | A single score |
-| `GET` | `/scores` | All scores |
-| `GET` | `/players/{name}/bestScore` | A player's best score |
-| `GET` | `/players/{name}/stats` | Games played, best and average score, rank |
-| `GET` | `/health` | Health check |
 
 ## Run it locally
 

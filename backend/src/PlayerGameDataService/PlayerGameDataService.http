@@ -22,7 +22,7 @@ POST {{PlayerGameDataService_HostAddress}}/players/register
 Content-Type: application/json
 
 {
-  "playerName": "Tester{{$randomInt 100 999}}"
+  "playerName": "T{{$randomInt 1000 9999}}"
 }
 
 ### Register the same name again -> 409 (send "register" first)
@@ -46,17 +46,40 @@ POST {{PlayerGameDataService_HostAddress}}/players/register
 Content-Type: application/json
 
 {
-  "playerName": "ThisNameIsWayTooLongForTheBoard"
+  "playerName": "TooLong"
 }
 
-### Submit a valid score with the token -> 201 Created + Location header (send "register" first)
+### Register a name with a space -> 400
+POST {{PlayerGameDataService_HostAddress}}/players/register
+Content-Type: application/json
+
+{
+  "playerName": "a b"
+}
+
+### Start a run -> 200 with a runId
+# @name startRun
+POST {{PlayerGameDataService_HostAddress}}/runs
+
+### Submit an impossible score for this run -> 400 (send "register" and "startRun" first)
+POST {{PlayerGameDataService_HostAddress}}/scores
+Content-Type: application/json
+Authorization: Bearer {{register.response.body.$.token}}
+
+{
+  "value": 69420,
+  "runId": "{{startRun.response.body.$.runId}}"
+}
+
+### Submit a valid score with the token -> 201 Created + Location header (send "register" and "startRun" first; send again -> 400, a run counts once)
 # @name submitScore
 POST {{PlayerGameDataService_HostAddress}}/scores
 Content-Type: application/json
 Authorization: Bearer {{register.response.body.$.token}}
 
 {
-  "value": 999
+  "value": 999,
+  "runId": "{{startRun.response.body.$.runId}}"
 }
 
 ### Submit a negative score -> 400 (send "register" first)

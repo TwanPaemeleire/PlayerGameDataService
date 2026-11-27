@@ -55,6 +55,20 @@ namespace PlayerGameDataService.Migrations
                     b.ToTable("Players");
                 });
 
+            modelBuilder.Entity("PlayerGameDataService.Data.Run", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("StartedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Runs");
+                });
+
             modelBuilder.Entity("PlayerGameDataService.Data.Score", b =>
                 {
                     b.Property<Guid>("Id")

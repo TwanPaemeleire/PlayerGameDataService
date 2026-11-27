@@ -22,7 +22,7 @@ public static class ScoreEndpoints
             return (foundScore == null) ? Results.NotFound() : Results.Ok(foundScore);
         }).WithName("GetScoreById");
 
-        group.MapPost("/", async (SubmitScoreRequest request, HttpRequest httpRequest, ScoreService scoreService, PlayerService playerService) =>
+        group.MapPost("/", async (SubmitScoreRequest request, HttpRequest httpRequest, ScoreService scoreService, PlayerService playerService, RunService runService) =>
         {
             const string bearerPrefix = "Bearer ";
             string? authorization = httpRequest.Headers.Authorization;
@@ -39,6 +39,10 @@ public static class ScoreEndpoints
             if (request.Value < 0)
             {
                 errors.Add("value", ["The score value can't be below 0."]);
+            }
+            else if (!await runService.TryFinishAsync(request.RunId, request.Value))
+            {
+                errors.Add("value", ["This score couldn't be verified."]);
             }
             if (errors.Count != 0) return Results.ValidationProblem(errors);
 

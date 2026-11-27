@@ -12,6 +12,7 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddScoped<ScoreService>();
 builder.Services.AddScoped<PlayerService>();
+builder.Services.AddScoped<RunService>();
 
 builder.Services.AddProblemDetails();
 builder.Services.AddHealthChecks();
@@ -23,7 +24,11 @@ builder.Services.AddRateLimiter(options =>
     options.AddPolicy(RateLimitPolicies.PerClient, httpContext =>
         RateLimitPartition.GetFixedWindowLimiter(
             httpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown",
-            _ => new FixedWindowRateLimiterOptions { PermitLimit = 10, Window = TimeSpan.FromMinutes(1) }));
+            _ => new FixedWindowRateLimiterOptions { PermitLimit = 20, Window = TimeSpan.FromMinutes(1) }));
+    options.AddPolicy(RateLimitPolicies.Register, httpContext =>
+        RateLimitPartition.GetFixedWindowLimiter(
+            httpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+            _ => new FixedWindowRateLimiterOptions { PermitLimit = 5, Window = TimeSpan.FromHours(1) }));
 });
 
 builder.Services.AddCors(options => 
@@ -53,5 +58,6 @@ app.UseRateLimiter();
 
 app.MapScoreEndpoints();
 app.MapPlayerEndpoints();
+app.MapRunEndpoints();
 app.MapHealthChecks("/health");
 app.Run();

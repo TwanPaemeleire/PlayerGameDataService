@@ -44,15 +44,15 @@ public static class PlayerEndpoints
             {
                 errors.Add("playerName", ["The name parameter can't be empty."]); 
             } 
-            else if(registerRequest.PlayerName.Length > Player.MaxNameLength)
+            else if(!Player.IsValidName(registerRequest.PlayerName))
             {
-                errors.Add("playerName", [$"Name is too long, max length is {Player.MaxNameLength}"]);
+                errors.Add("playerName", ["Name must be 3 to 5 letters or numbers."]);
             }
             if(errors.Count != 0) return Results.ValidationProblem(errors);
 
             RegisterPlayerResponse? response = await playerService.RegisterAsync(registerRequest);
             if(response is null) return Results.Conflict("This name is already taken.");
             return Results.CreatedAtRoute("GetPlayerStats", new { playerName = response.PlayerName }, response);
-        }).WithName("RegisterPlayer").RequireRateLimiting(RateLimitPolicies.PerClient);
+        }).WithName("RegisterPlayer").RequireRateLimiting(RateLimitPolicies.Register);
     }
 }

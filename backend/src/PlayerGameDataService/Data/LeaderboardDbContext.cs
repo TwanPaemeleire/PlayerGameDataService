@@ -6,6 +6,7 @@ public sealed class LeaderboardDbContext(DbContextOptions<LeaderboardDbContext> 
 {
     public DbSet<Player> Players => Set<Player>();
     public DbSet<Score> Scores => Set<Score>();
+    public DbSet<Run> Runs => Set<Run>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

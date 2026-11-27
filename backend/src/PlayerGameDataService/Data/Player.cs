@@ -10,4 +10,5 @@ public sealed class Player
     public required string NormalizedName { get; set; }
 
     public static string NormalizeName(string name) => name.ToUpperInvariant();
+    public static bool IsValidName(string name) => name.Length is >= 3 and <= 5 && name.All(char.IsLetterOrDigit);
 }

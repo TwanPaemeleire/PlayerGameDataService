@@ -12,6 +12,23 @@ public class LeaderboardService : MonoSingleton<LeaderboardService>
 
     [SerializeField] private ApiConfig _apiConfig;
 
+    private Task<string> _runIdTask;
+
+    public void StartRun()
+    {
+        _runIdTask = RequestRunId();
+    }
+
+    private async Task<string> RequestRunId()
+    {
+        using UnityWebRequest request = UnityWebRequest.Post(_apiConfig.BaseUrl + "/runs", "{}", "application/json");
+        request.timeout = _apiConfig.TimeoutSeconds;
+        await request.SendWebRequest();
+
+        if (request.result != UnityWebRequest.Result.Success) return null;
+        return JsonUtility.FromJson<StartRunResponse>(request.downloadHandler.text).runId;
+    }
+
     public async Task<List<LeaderboardEntry>> GetTop10Scores()
     {
         using UnityWebRequest request = UnityWebRequest.Get(_apiConfig.BaseUrl + "/scores/top");
@@ -36,6 +53,12 @@ public class LeaderboardService : MonoSingleton<LeaderboardService>
 
     public async Task<SubmitScoreResult> SubmitScore(string playerName, int score)
     {
+        string runId = _runIdTask != null ? await _runIdTask : null;
+        if (runId == null)
+        {
+            return new SubmitScoreResult(false, "Couldn't reach the server during this run");
+        }
+
         if (!IsRegistered)
         {
             string requestJson = JsonUtility.ToJson(new RegisterRequest { playerName = playerName });
@@ -58,7 +81,7 @@ public class LeaderboardService : MonoSingleton<LeaderboardService>
             PlayerPrefs.Save();
         }
 
-        string json = JsonUtility.ToJson(new SubmitScoreRequest { value = score });
+        string json = JsonUtility.ToJson(new SubmitScoreRequest { value = score, runId = runId });
         using UnityWebRequest scoreSubmitRequest = UnityWebRequest.Post(_apiConfig.BaseUrl + "/scores", json, "application/json");
         scoreSubmitRequest.SetRequestHeader("Authorization", "Bearer " + PlayerPrefs.GetString(TokenKey));
         scoreSubmitRequest.timeout = _apiConfig.TimeoutSeconds;
@@ -107,6 +130,13 @@ public class LeaderboardService : MonoSingleton<LeaderboardService>
     private class SubmitScoreRequest
     {
         public int value;
+        public string runId;
+    }
+
+    [Serializable]
+    private class StartRunResponse
+    {
+        public string runId;
     }
 
     [Serializable]
